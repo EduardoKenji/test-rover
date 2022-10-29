@@ -3,10 +3,10 @@
 # Important assumptions
 
 1) Assuming the supplied grid parameters are '5 5'. The grid will be actually 6x6 because it will start at (0,0) and end at (5,5). Theoretically, these position are valid for the rover: (0,0), (5,0), (0,5), (5,5)
-2) The rover **will not** move with a 'M' command to a new position if:
+2) The current implementation assumes a rover will never be placed in the same position as a rover already present within the grid. The current implementation also assumes that we want to avoid collisions between the new rover and the rovers already present within the grid.
+3) The rover **will not** move with a 'M' command to a new position if:
     - The new position exceeds the map boundaries.
     - There is another rover in the new position.
-3) The current implementation assumes a drone will never be placed in the same position as a drone already present within the grid.
 4) The following commands are needed to **setup** the project:
 ```
 bundle install
