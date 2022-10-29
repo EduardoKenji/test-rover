@@ -6,6 +6,10 @@
 2) The rover **will not** move with a 'M' command to a new position if:
     - The new position exceeds the map boundaries.
     - There is another rover in the new position.
+3) The current implementation supports command line arguments. The input text files need to placed in the `input_files` folder. The output text files need to be placed in the `output_files` folder. It can be run like this:
+```
+ruby lib/test_rover.rb example_input.txt example_output.txt
+```
 
 # Problem
 A squad of robotic rovers are to be landed by NASA on a plateau on Mars. This plateau, which is curiously rectangular, must be navigated by the rovers so that their on-board cameras can get a complete view of the surrounding terrain to send back to Earth.
