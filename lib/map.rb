@@ -1,4 +1,4 @@
-require './rover'
+require_relative 'rover'
 
 # Map abstraction to represent the plateau on Mars
 class Map
