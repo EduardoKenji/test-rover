@@ -1,5 +1,12 @@
 # test-rover
 
+# Important assumptions
+
+1) Assuming the supplied grid parameters are '5 5'. The grid will be actually 6x6 because it will start at (0,0) and end at (5,5). Theoretically, these position are valid for the rover: (0,0), (5,0), (0,5), (5,5)
+2) The rover **will not** move with a 'M' command to a new position if:
+    - The new position exceeds the map boundaries.
+    - There is another rover in the new position.
+
 # Problem
 A squad of robotic rovers are to be landed by NASA on a plateau on Mars. This plateau, which is curiously rectangular, must be navigated by the rovers so that their on-board cameras can get a complete view of the surrounding terrain to send back to Earth.
 
