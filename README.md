@@ -6,7 +6,7 @@
 - Rotation the rover is always possible, but we will only move the rover forward (to the direction it is facing) if the new position is within the map boundaries and there is no rover located on new position. This is possible in the solution by tracking a rover instance (from a `Rover` class) within the `grid` from a map instance (from the `Map` class). 
 - It wouldn't be convenient for the user to hardcode the input file name and the output file name. Thus, I've added support for command line arguments(more details on how to use them below).
 - The implementation has an `O(n*m)` time complexity. With `n` being the number of rovers and `m` as the average number of commands between all rovers. Since the order of the commands matter, the code processes one command at a time.
-- I've attempted to follow good coding practices such as DRY and clean code. The functions will be usually shorter than 20 lines. There will be low to no code repetition. As mentioned before, I'm utilizing OOP concepts such as the Map and the Rover classes to better represent and track our objects. I've also tried to avoid changing the objects attributes outside their classes or in a disorganized matter.
+- I've taken in consideration good coding practices(such as DRY and clean code) and the project files/folders organization.
 
 # Important assumptions/information
 
