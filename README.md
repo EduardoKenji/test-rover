@@ -6,11 +6,11 @@
 2) The rover **will not** move with a 'M' command to a new position if:
     - The new position exceeds the map boundaries.
     - There is another rover in the new position.
-3) The following commands are needed to setup the project:
+3) The following commands are needed to **setup** the project:
 ```
 bundle install
 ```
-4) The current implementation supports command line arguments. The input text files need to placed in the `input_files` folder. The output text files need to be placed in the `output_files` folder. It can be run like this:
+4) The current implementation supports **command line arguments**. The input text files need to placed in the `input_files` folder. The output text files need to be placed in the `output_files` folder. It can be run like this:
 ```
 ruby lib/test_rover.rb example_input.txt example_output.txt
 ```
@@ -20,7 +20,7 @@ The command will generate the output text file and it will also print the final 
 
 ![image](https://user-images.githubusercontent.com/11583245/198854286-cd3a8c45-f1c7-461b-8a8f-d4b453e412c8.png)
 
-5) The automated tests can be executed with this command:
+5) The **automated tests** can be executed with this command:
 ```
 rspec
 ```
