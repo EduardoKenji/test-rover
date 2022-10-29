@@ -6,7 +6,7 @@ class Rover
     @direction = direction
   end
 
-  attr_accessor :current_x, :current_y, :direction
+  attr_reader :current_x, :current_y, :direction
 
   def rotate(command)
     turn_to_direction_map = { 'N' => { 'L' => 'W', 'R' => 'E' },
