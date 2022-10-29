@@ -10,7 +10,7 @@
 ```
 bundle install
 ```
-4) The current implementation supports **command line arguments**. The input text files need to placed in the `input_files` folder. The output text files need to be placed in the `output_files` folder. It can be run like this:
+4) The current implementation supports **command line arguments**. The input text files need to placed in the `input_files` folder. The output text files will be generated in the `output_files` folder. It can be run like this:
 ```
 ruby lib/test_rover.rb example_input.txt example_output.txt
 ```
