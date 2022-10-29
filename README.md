@@ -19,6 +19,7 @@ The command will generate the output text file and it will also print the final 
 ![image](https://user-images.githubusercontent.com/11583245/198854279-aa46ebfc-a930-4864-afa1-e602e109458f.png)
 
 ![image](https://user-images.githubusercontent.com/11583245/198854286-cd3a8c45-f1c7-461b-8a8f-d4b453e412c8.png)
+![image](https://user-images.githubusercontent.com/11583245/198854415-810bdbd8-9b7f-4375-8173-c98ada658265.png)
 
 5) The **automated tests** can be executed with this command:
 ```
