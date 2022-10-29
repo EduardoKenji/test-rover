@@ -26,10 +26,10 @@ end
 # Therefore, we won't move the rover if there is another rover in the position we want to move our current rover
 def attempt_to_move_rover(rover, map, new_x, new_y)
   are_coordinates_valid = new_x >= 0 && new_x <= map.width && new_y <= map.height && new_y >= 0
-  if map.grid_position_empty?(new_x, new_y) && are_coordinates_valid
-    map.update_rover_position_inside_map(rover, new_x, new_y)
-    rover.move_to_new_position(new_x, new_y)
-  end
+  return unless map.grid_position_empty?(new_x, new_y) && are_coordinates_valid
+
+  map.update_rover_position_inside_map(rover, new_x, new_y)
+  rover.move_to_new_position(new_x, new_y)
 end
 
 def move_rover(rover, map)
