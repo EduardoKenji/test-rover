@@ -25,6 +25,9 @@ The command will generate the output text file and it will also print the final 
 ```
 rspec
 ```
+The automated tests will run `TestRover.main` for each test case and it will generate output text files and compare the contents between the actual and the expected output text files (they will have `_correct` in the file name):
+
+![image](https://user-images.githubusercontent.com/11583245/198854502-1ef2402b-4e2c-4ec5-b205-8137b188d162.png)
 
 # Problem
 A squad of robotic rovers are to be landed by NASA on a plateau on Mars. This plateau, which is curiously rectangular, must be navigated by the rovers so that their on-board cameras can get a complete view of the surrounding terrain to send back to Earth.
