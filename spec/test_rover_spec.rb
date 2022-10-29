@@ -4,31 +4,36 @@ describe TestRover do
   describe 'control rovers sequentially' do
     context "given 'example_input.txt'" do
       it "writes 'example_output.txt'" do
-        input_file_name = 'example_input.txt'
-        output_file_name = 'example_output.txt'
-        correct_output_file_name = 'example_output_correct.txt'
-        TestRover.main(input_file_name, output_file_name)
-        expect(compare_files(output_file_name, correct_output_file_name)).to be_truthy
+        expect(test_control_rovers('example_input.txt', 'example_output.txt',
+                                   'example_output_correct.txt')).to be_truthy
       end
     end
 
-    context "given 'simple_tests_input.txt'" do
-      it "writes 'simple_tests_output.txt'" do
-        input_file_name = 'simple_tests_input.txt'
-        output_file_name = 'simple_tests_output.txt'
-        correct_output_file_name = 'simple_tests_output_correct.txt'
-        TestRover.main(input_file_name, output_file_name)
-        expect(compare_files(output_file_name, correct_output_file_name)).to be_truthy
+    context "given 'simple_input.txt'" do
+      it "writes 'simple_output.txt'" do
+        expect(test_control_rovers('simple_input.txt', 'simple_output.txt',
+                                   'simple_output_correct.txt')).to be_truthy
       end
     end
 
-    context "given 'map_corner_tests_input.txt'" do
-      it "writes 'map_corner_tests_output.txt'" do
-        input_file_name = 'map_corner_tests_input.txt'
-        output_file_name = 'map_corner_tests_output.txt'
-        correct_output_file_name = 'map_corner_tests_output_correct.txt'
-        TestRover.main(input_file_name, output_file_name)
-        expect(compare_files(output_file_name, correct_output_file_name)).to be_truthy
+    context "given 'map_corner_input.txt'" do
+      it "writes 'map_corner_output.txt'" do
+        expect(test_control_rovers('map_corner_input.txt', 'map_corner_output.txt',
+                                   'map_corner_output_correct.txt')).to be_truthy
+      end
+    end
+
+    context "given 'edge_case_input.txt'" do
+      it "writes 'edge_case_output.txt'" do
+        expect(test_control_rovers('edge_case_input.txt', 'edge_case_output.txt',
+                                   'edge_case_output_correct.txt')).to be_truthy
+      end
+    end
+
+    context "given 'collisions_input.txt'" do
+      it "writes 'collisions_output.txt'" do
+        expect(test_control_rovers('collisions_input.txt', 'collisions_output.txt',
+                                   'collisions_output_correct.txt')).to be_truthy
       end
     end
   end
@@ -36,13 +41,13 @@ end
 
 private
 
-def get_file(file_type_folder, file_name, file_flag)
-  parent_directory = File.expand_path('..', __dir__)
-  files_directory = File.join(parent_directory, file_type_folder)
-  file_path = File.join(files_directory, file_name)
-  File.open(file_path, file_flag)
+# Test control rovers, generate output file and compare the expected and actual output files
+def test_control_rovers(input_file_name, output_file_name, correct_output_file_name)
+  TestRover.main(input_file_name, output_file_name)
+  compare_files(output_file_name, correct_output_file_name)
 end
 
+# Compare if both files content are the same
 def compare_files(first_file_name, second_file_name)
   first_file = get_file('output_files', first_file_name, 'r')
   second_file = get_file('output_files', second_file_name, 'r')
@@ -54,4 +59,11 @@ def compare_files(first_file_name, second_file_name)
     return false if line != second_file_lines[i]
   end
   true
+end
+
+def get_file(file_type_folder, file_name, file_flag)
+  parent_directory = File.expand_path('..', __dir__)
+  files_directory = File.join(parent_directory, file_type_folder)
+  file_path = File.join(files_directory, file_name)
+  File.open(file_path, file_flag)
 end
