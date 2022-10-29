@@ -98,4 +98,4 @@ module TestRover
   end
 end
 
-Main.main(ARGV[0], ARGV[1]) if __FILE__ == $PROGRAM_NAME
+TestRover.main(ARGV[0], ARGV[1]) if __FILE__ == $PROGRAM_NAME
