@@ -34,7 +34,7 @@ The command will generate the output text file and it will also print the final 
 ```
 rspec
 ```
-The automated tests will run `TestRover.main` for each test case and it will generate output text files. The automated tests are more closer to being **integration tests** instead of **unit tests**. The tests will compare the contents between the actual and the expected output text files (they will have `_correct` in their file names):
+The automated tests will run `TestRover.main` for each test case and it will generate output text files. The automated tests are closer to being **integration tests** instead of **unit tests**. The tests will compare the contents between the actual and the expected output text files (they will have `_correct` in their file names):
 
 ![image](https://user-images.githubusercontent.com/11583245/198854502-1ef2402b-4e2c-4ec5-b205-8137b188d162.png)
 
