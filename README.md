@@ -2,6 +2,7 @@
 
 # Brief explanation of the solution design
 
+- Implemented with Ruby 3.1.2p20 and RSpec 3.12.
 - Each rover will be controlled sequentially. For 2+ rovers, when controlling the current rover, we will need to pay attention to the previously operated rovers that are still present within the map. 
 - Rotation the rover is always possible, but we will only move the rover forward (to the direction it is facing) if the new position is within the map boundaries and there is no rover located on new position. This is possible in the solution by tracking a rover instance (from a `Rover` class) within the `grid` from a map instance (from the `Map` class). 
 - It wouldn't be convenient for the user to hardcode the input file name and the output file name. Thus, I've added support for command line arguments(more details on how to use them below).
